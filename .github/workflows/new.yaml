@@ -1,8 +1,9 @@
 name: Experiment
 on: 
-  schedule:
-    - cron: '*/15 * * * *'
+  #schedule:
+   # - cron: '*/15 * * * *'
    # - cron: '30 2 * * *'
+   push
 
 jobs:
   job1:
@@ -13,3 +14,8 @@ jobs:
     
     - name: List files
       run: echo "hii"
+    - name: Step 7 - download the artifact from build
+      uses: jfrog/setup-jfrog-cli@v2
+    - run: |
+         jfrog --version
+            jfrog rt ping
