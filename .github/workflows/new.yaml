@@ -18,4 +18,5 @@ jobs:
       uses: jfrog/setup-jfrog-cli@v2
     - run: |
          jfrog --version
-            jfrog rt ping
+         jf config add
+         
